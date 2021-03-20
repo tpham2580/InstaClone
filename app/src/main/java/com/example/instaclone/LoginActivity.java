@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.signup) {
             goSignupActivity();
-            Toast.makeText(this, "Logout successful!", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

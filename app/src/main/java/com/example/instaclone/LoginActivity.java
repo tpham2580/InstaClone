@@ -1,10 +1,13 @@
 package com.example.instaclone;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +45,27 @@ public class LoginActivity extends AppCompatActivity {
                 loginUser(username, password);
             }
         });
+    }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_signup, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.signup) {
+            goSignupActivity();
+            Toast.makeText(this, "Logout successful!", Toast.LENGTH_SHORT).show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void goSignupActivity() {
+        Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void loginUser(String username, String password) {

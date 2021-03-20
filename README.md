@@ -27,7 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![](instaclone-walkthrough.gif)
+![](instaclone-walkthrough1.gif)
 
 ## Notes
 
